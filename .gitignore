@@ -1,0 +1,4 @@
+# full-resolution generation originals (web-sized copies live in assets/front, assets/interior, assets/associate)
+assets/src/
+.DS_Store
+Thumbs.db

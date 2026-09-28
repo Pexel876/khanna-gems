@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Khanna Gems — Astrological Gemstones, Trusted Since 1967</title>
+  <meta name="description" content="Khanna Gems — the world's most trusted institution for natural, certified astrological gemstones. Step inside our boutique." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=10" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Logo recreated from the Khanna Gems Figma; swap in the official export when available. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="logo" viewBox="0 0 300 96">
+      <text x="4" y="54" font-family="Cormorant Garamond, Georgia, serif" font-size="56" font-weight="500" letter-spacing="1" fill="var(--logo-main)">KHANNA</text>
+      <g transform="translate(262 22)" fill="none" stroke="var(--logo-accent)" stroke-width="3" stroke-linecap="round">
+        <circle r="17" />
+        <path d="M 9 -9 A 12.5 12.5 0 1 0 12 4 L 3 4 L 3 -1" />
+      </g>
+      <text x="166" y="88" font-family="Cormorant Garamond, Georgia, serif" font-size="30" font-weight="500" letter-spacing="7" text-anchor="middle" fill="var(--logo-accent)">GEMS</text>
+    </symbol>
+  </svg>
+
+  <canvas id="scene"></canvas>
+  <div class="scrim"></div>
+  <div class="vignette"></div>
+  <div class="grain"></div>
+  <div class="progress"><span></span></div>
+
+  <div class="loader"><svg class="logo" aria-label="Khanna Gems"><use href="#logo" /></svg><em id="load-pct">0%</em></div>
+
+  <header class="topbar">
+    <nav>
+      <a href="#" data-goto="0.86">Collections</a>
+      <a href="#" data-goto="0.63">Scientific Method</a>
+      <a href="#" data-goto="0.5">Learning Center</a>
+      <a href="#" data-goto="0.2">Boutiques</a>
+      <a href="#" data-goto="0">Heritage</a>
+    </nav>
+    <a class="brand" href="#" data-goto="0" aria-label="Khanna Gems — home"><svg class="logo"><use href="#logo" /></svg></a>
+    <a class="btn red" href="#" data-goto="1">Consultation</a>
+  </header>
+
+  <!-- Story captions: data-range = fadeInStart, fullyIn, fullyOut, fadeOutEnd (scroll progress 0–1) -->
+  <section class="caption hero" data-range="-1,0,0.03,0.07">
+    <p class="eyebrow">The world's most trusted institution for</p>
+    <h1>Astrological <em>Gemstones</em></h1>
+    <p class="lead">Trusted since 1967. Every stone we place in your hands begins as a sketch — and ends as an heirloom.</p>
+  </section>
+
+  <section class="caption left" data-range="0.06,0.1,0.17,0.21">
+    <p class="eyebrow">I — The Boutique</p>
+    <h2>Precision. Provenance.<br /><em>Preservation.</em></h2>
+    <p>Our flagship showroom, where every gemstone is treated as a historical record.</p>
+  </section>
+
+  <section class="caption right" data-range="0.23,0.26,0.31,0.33">
+    <p class="eyebrow">II — The Threshold</p>
+    <h2>Step <em>inside</em></h2>
+    <p>Natural, unheated and government-lab certified — the stones are waiting.</p>
+  </section>
+
+  <section class="caption left" data-range="0.44,0.47,0.54,0.57">
+    <p class="eyebrow">III — The Welcome</p>
+    <h2>Namaste.<br /><em>Welcome to Khanna Gems.</em></h2>
+    <p>Every guest is greeted as family. Our experts will guide you to the stone your chart calls for.</p>
+  </section>
+
+  <section class="caption right" data-range="0.58,0.61,0.66,0.69">
+    <p class="eyebrow">IV — The Reveal</p>
+    <h2>A gemstone,<br /><em>chosen for you</em></h2>
+    <p>Hand-selected by our gemmologists and astrologers, presented in a case of midnight leather.</p>
+  </section>
+
+  <section class="caption left" data-range="0.68,0.71,0.75,0.78">
+    <p class="eyebrow">V — The Stone</p>
+    <h2>Lifted into<br /><em>the light</em></h2>
+    <p>Turn it slowly. Watch every facet wake.</p>
+  </section>
+
+  <div class="scroll-hint"><span>Scroll to enter</span><i></i></div>
+
+  <aside class="badges" id="badges">
+    <p>Trusted since 1967</p>
+    <p>Govt. lab certified</p>
+    <p>Natural &amp; unused</p>
+    <p>Non-heated &amp; untreated</p>
+    <p>Expert guidance</p>
+  </aside>
+
+  <!-- Gem characteristics -->
+  <div class="specs">
+    <div class="gem-head">
+      <p class="eyebrow">The Khanna Standard</p>
+      <h3 id="gem-name">Colombian Emerald</h3>
+      <p class="gem-sub" id="gem-sub"></p>
+    </div>
+    <ul class="col l" id="spec-l"></ul>
+    <ul class="col r" id="spec-r"></ul>
+    <p class="drag-hint">Drag to turn the stone</p>
+  </div>
+
+  <div class="stone-bar">
+    <div class="picker" id="picker"></div>
+    <a class="btn solid red" href="#">Book a consultation</a>
+  </div>
+
+  <aside class="chapters" id="chapters"></aside>
+
+  <div id="scroll-space"></div>
+
+  <script type="module" src="main.js?v=10"></script>
+</body>
+</html>

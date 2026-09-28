@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 96" role="img" aria-label="Khanna Gems">
+  <!-- Recreated from the Khanna Gems Figma header. Replace with the official exported logo when available. -->
+  <style>
+    .main { fill: var(--logo-main, #b3141c); }
+    .accent { fill: var(--logo-accent, #c5a059); }
+    .ring { fill: none; stroke: var(--logo-accent, #c5a059); }
+    text { font-family: "Cormorant Garamond", Georgia, serif; }
+  </style>
+  <text class="main" x="4" y="54" font-size="56" font-weight="500" letter-spacing="1">KHANNA</text>
+  <g transform="translate(262 22)">
+    <circle class="ring" r="17" stroke-width="3"/>
+    <path class="accent" d="M 9 -9 A 12.5 12.5 0 1 0 12 4 L 3 4 L 3 -1 L 12 -1" fill="none" stroke="var(--logo-accent, #c5a059)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text class="accent" x="166" y="88" font-size="30" font-weight="500" letter-spacing="7" text-anchor="middle">GEMS</text>
+</svg>
